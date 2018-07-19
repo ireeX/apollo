@@ -51,30 +51,30 @@ sudo apt-get install hexchat
 ```
 /join #channel_name
 ```
-To change a new nickname,
+更改新的昵称,
 ```
 /nick new_nickname
 ```
-To see all commands,
+查看所有命令,
 ```
 /help
 ```
-To start one-to-one private chat,
+开始一对一私人聊天,
 ```
 /query the_nickname_talking_to
 ```
 
-There are a `NickServ` and a `ChanServ` that you can register you nickname or maitain control of a channel.
-To see what you can do,
+在 `NickServ` 和 `ChanServ` 中你可以注册您的昵称或者保持对频道的控制。
+想要看您能做什么,
 ```
 /msg NickServ help
 ```
-and
+和
 ```
 /msg ChanServ help
 ```
 
-## Further reading
-[Basic IRC Commands](http://www.ircbeginner.com/ircinfo/ircc-commands.html)
+## 更多阅读
+[基本IRC指令](http://www.ircbeginner.com/ircinfo/ircc-commands.html)
 
-[Tips and Tricks](http://www.ircbeginner.com/ircinfo/ircc-tips.html)
+[一些小技巧](http://www.ircbeginner.com/ircinfo/ircc-tips.html)
