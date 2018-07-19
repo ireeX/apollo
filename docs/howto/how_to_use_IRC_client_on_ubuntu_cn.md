@@ -40,14 +40,14 @@ sudo apt-get install hexchat
 
 ![img](images/irc_image_04.png)
 
-点击`Ok` 按钮, it will join #apolloauto channel.
+点击`Ok` 按钮, 就可以加入 #apolloauto频道了。
 
 ![img](images/irc_image_05.png)
 
-Wow! Now you can say hello to the channel members :)
+现在就可以和频道里的成员们交流了 :)
 
-## Most used command
-To join a channel, just type join command(IRC command prefixed with `/`)  with channel name(IRC channel name prefixed with `#`)
+## 最常用的命令
+要加入一个通道，只需键入连接命令（IRC命令加上前缀 `/`) 用通道名（IRC信道名加上前缀 `#`)
 ```
 /join #channel_name
 ```
