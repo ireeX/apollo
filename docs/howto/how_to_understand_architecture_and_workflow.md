@@ -4,7 +4,7 @@
 ## 理解Apollo内核的基本原理
 
 自动驾驶汽车\(AV\) 通过控制器局域网络总线 \(CAN bus\)计划引擎计划动力. 软件从硬件寄存器读取数据，并像我们用汇编语言那样把它们写回去。为了简洁地计算，定位模块、感知模块、规划模块作为独立的输入源和输出源通过P2P一起工作。P2P由RPC网络应用支持。
-ApolloAuto使用ROS1作为底层网络，这意味着ApolloAuto从ROS1借用主节点框架。 由于来自ROS1的XMLRPC真的很旧 \(与最近的 brpc和 [grpc](https://yiakwy.github.io/blog/2017/10/01/gRPC-C-CORE)相比来说\), 百度开发了自己的RPC原型的protobuff版本。 
+ApolloAuto使用ROS1作为底层网络，这意味着ApolloAuto从ROS1借用主节点框架。 由于来自ROS1的XMLRPC真的很旧（与最近的 brpc和 [grpc](https://yiakwy.github.io/blog/2017/10/01/gRPC-C-CORE)相比来说）, 百度开发了自己的RPC原型的protobuff版本。 
 
 在百度的ApolloAuto中，已经描述了三个发展阶段。
 1. 离线仿真引擎Dreamview/ApolloAuto内核软件模块
@@ -31,7 +31,7 @@ ROS是一款软件，目前仅由Ubuntu系列提供支持。它有一个主要ro
 
 > printenv | grep ROS
 
-默认的ros主要uri是http://localhost:11311. 可以通过执行ros::init来创建一个独立的可执行文件，并通过使用c++或python执行ros::spin\（某种Linux事件循环\）来启动它。
+默认的ros主要uri是http://localhost:11311. 可以通过执行ros::init来创建一个独立的可执行文件，并通过使用c++或python执行ros::spin（某种Linux事件循环）来启动它。
 新创建的包的可执行文件叫做 ***ROS node***. 为了方便其它节点查询，节点将在Master中注册其名称和IP地址。 节点通过直接构建TCP连接与每个节点进行通信。
 
 如果节点想要从其他节点读取数据，我们称之为订户（subscriber）。 典型的格式如下
@@ -85,7 +85,7 @@ HMI是一个简单的基于Flask的Python应用程序。
    - 高精地图：获得转换矩阵转换点世界坐标到局部坐标并建立地图多边形
    - ROI 滤波器: 获取ROI并对输入数据进行卡尔曼滤波
    - Segmentation: 基于U-NET的（许多变体）CAFFE模型将加载并基于HD映射和ROI滤波结果的数据进行正向计算。
-   对象构建：激光雷达返回点\（x，y，z\）。因此，你需要把它们分成“障碍”\（向量或集合\）。   
+   对象构建：激光雷达返回点（x，y，z）。因此，你需要把它们分成“障碍”\（向量或集合\）。   
    - 障碍物跟踪器：百度正在使用来自谷歌的HM求解器。对于一个大的二部图，拉格朗日格式的KM算法通常被部署，因为SGD是可以非常简单使用的。
 2. 雷达:
    - 类似于激光雷达与来自传感器的raw_obstacles信息。
